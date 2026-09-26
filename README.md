@@ -21,6 +21,21 @@ The monthly update fetches an OpenAlex author matched to ORCID `0000-0002-1971-2
 
 The page includes an email address and named collaborators from the supplied CV; check them before publishing publicly. The landscape cover is an illustrative generated image, not a photograph of a documented research site.
 
+## Add a thought or blog post
+
+The **Notes & thoughts** section reads entries from `thoughts.json`. Add an object to the `posts` array and publish the repository:
+
+```json
+{
+  "date": "2026-09-26",
+  "title": "A short title",
+  "summary": "A one- or two-sentence introduction.",
+  "url": "posts/my-note.html"
+}
+```
+
+The `url` is optional. Posts are automatically shown newest first. Until the first entry is added, the website displays a quiet placeholder instead of an empty grid.
+
 ## News, SDGs, and portrait
 
 The News section contains verified coverage links as of September 2026. Add new coverage cards in `index.html` under `id="news"`. The SDG selector is an editorial mapping of research topics to relevant UN goals; update its descriptions and goal links in `sdgThemes`. The IUCN figure is specifically about wild bees in Europe, not a global pollinator estimate.
