@@ -2,6 +2,7 @@
 body {
   background: #fff url("botanical-leaves-gray.webp") center top / 690px auto repeat fixed;
   font-family: "Avenir Next", Avenir, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 400;
 }
 
 .brand,
@@ -15,9 +16,11 @@ body {
   font-family: "Avenir Next", Avenir, "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
-.brand { font-weight: 800; letter-spacing: -0.025em; }
-.hero h1 { font-weight: 800; letter-spacing: -0.055em; max-width: 850px; }
-.section h2 { font-weight: 750; letter-spacing: -0.045em; max-width: 820px; }
+.brand { font-weight: 600; letter-spacing: -0.025em; }
+.nav a, .hero .button { font-weight: 600; }
+.hero h1 { font-weight: 600; letter-spacing: -0.045em; max-width: 850px; }
+.section h2 { font-weight: 600; letter-spacing: -0.035em; max-width: 820px; }
+.section h3 { font-weight: 500; }
 
 .section {
   position: relative;
@@ -27,6 +30,7 @@ body {
 
 .section:nth-of-type(even) { background: rgba(248, 250, 247, 0.9); }
 .section .kicker { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 18px; }
+.section .kicker, .eyebrow { font-weight: 600; }
 .section .kicker::before { content: ""; width: 28px; height: 2px; background: var(--gold); }
 .section h2::after {
   content: "";
@@ -40,6 +44,11 @@ body {
 
 .about-grid { align-items: start; }
 .portrait { box-shadow: 18px 18px 0 rgba(22, 59, 50, 0.1); }
+
+/* Dark pauses divide the longer page into short, readable chapters. */
+#research,
+#collaborations,
+#news { border-bottom: 32px solid var(--forest); }
 
 .quote-section {
   isolation: isolate;
@@ -65,7 +74,7 @@ body {
 .quote-label {
   color: #d7dfd5;
   font-size: 0.76rem;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
 }
@@ -73,17 +82,26 @@ body {
 .biodiversity-quote {
   margin: 24px 0 22px;
   font-size: clamp(2rem, 4.3vw, 4.25rem);
-  font-weight: 750;
+  font-weight: 500;
   line-height: 1.12;
   letter-spacing: -0.045em;
 }
 
 .quote-attribution { display: flex; align-items: center; justify-content: space-between; gap: 24px; color: #dfe9df; }
-.quote-attribution a { font-weight: 750; text-underline-offset: 4px; }
+.quote-attribution a { font-weight: 600; text-underline-offset: 4px; }
 .quote-dots { display: flex; gap: 9px; }
 .quote-dots button { width: 28px; height: 4px; padding: 0; border: 0; background: rgba(255, 255, 255, 0.3); cursor: pointer; }
 .quote-dots button[aria-current="true"] { background: #e5c693; }
 .quote-fade { animation: quote-fade 0.5s ease both; }
+
+.contact {
+  background: var(--forest) !important;
+  color: #fff;
+  border-bottom-color: var(--forest);
+}
+.contact h2::after { background: #e5c693; }
+.contact p { color: #d8e6db; }
+.contact a { color: #f1d8ae; }
 
 @keyframes quote-fade {
   from { opacity: 0; transform: translateY(9px); }
@@ -93,6 +111,7 @@ body {
 @media (max-width: 760px) {
   body { background-size: 470px auto; }
   .section { padding-block: 68px; }
+  #research, #collaborations, #news { border-bottom-width: 22px; }
   .quote-section { min-height: 390px; }
   .quote-attribution { align-items: flex-start; flex-direction: column; }
   .portrait { box-shadow: 10px 10px 0 rgba(22, 59, 50, 0.1); }
