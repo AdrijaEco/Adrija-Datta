@@ -65,6 +65,19 @@ body {
   overflow: hidden;
 }
 
+.quote-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: url("biodiversity-bee.webp"), url("biodiversity-bee.webp"), url("biodiversity-bee.webp");
+  background-position: 7% 18%, 91% 25%, 79% 86%;
+  background-size: 82px, 108px, 66px;
+  background-repeat: no-repeat;
+  opacity: 0.13;
+  pointer-events: none;
+}
+
 .quote-section::after {
   content: "";
   position: absolute;
@@ -118,6 +131,12 @@ body {
   .section { padding-block: 68px; }
   #research, #collaborations, #news { border-bottom-width: 22px; }
   .quote-section { min-height: 390px; }
+  .quote-section::before {
+    background-image: url("biodiversity-bee.webp"), url("biodiversity-bee.webp");
+    background-position: 7% 12%, 94% 83%;
+    background-size: 58px, 72px;
+    opacity: 0.1;
+  }
   .quote-attribution { align-items: flex-start; flex-direction: column; }
   .portrait { box-shadow: 10px 10px 0 rgba(22, 59, 50, 0.1); }
 }
