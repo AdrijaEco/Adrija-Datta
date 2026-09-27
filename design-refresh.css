@@ -51,14 +51,13 @@ body {
 .portrait { box-shadow: 18px 18px 0 rgba(22, 59, 50, 0.1); }
 .identity-links a[href*="linkedin.com"] img { width: 23px; height: 23px; border-radius: 5px; }
 
-/* Dark pauses divide the longer page into short, readable chapters. */
-#research,
-#collaborations,
-#news { border-bottom: 76px solid var(--forest); }
+/* A consistent dark pause separates every content chapter. */
+main > .section:not(.quote-section):not(.contact) {
+  border-bottom: 76px solid var(--forest);
+}
 
-#research::after,
-#collaborations::after,
-#news::after {
+main > .section:not(.quote-section):not(.contact)::after {
+  content: "ECOLOGICAL NETWORKS   .   BIODIVERSITY   .   GLOBAL CHANGE";
   position: absolute;
   left: 22px;
   right: 22px;
@@ -69,29 +68,13 @@ body {
   justify-content: center;
   color: rgba(255, 255, 255, 0.78);
   text-align: center;
-  pointer-events: none;
-}
-
-#research::after {
-  content: "PLANT–POLLINATOR NETWORKS   ·   WARMING   ·   RESTORATION";
   font-size: clamp(0.7rem, 1.2vw, 0.86rem);
   font-weight: 600;
   letter-spacing: 0.18em;
+  pointer-events: none;
 }
 
-#collaborations::after {
-  content: "Agroecology  ×  beneficial insects  ×  food systems";
-  font-size: clamp(0.86rem, 1.5vw, 1.05rem);
-  font-weight: 500;
-  letter-spacing: 0.04em;
-}
-
-#news::after {
-  content: "BIODIVERSITY  →  CLIMATE  →  PEOPLE  →  IMPACT";
-  font-size: clamp(0.72rem, 1.3vw, 0.9rem);
-  font-weight: 600;
-  letter-spacing: 0.14em;
-}
+.timeline h3 a { color: var(--forest); text-underline-offset: 4px; }
 
 .quote-section {
   isolation: isolate;
@@ -167,14 +150,14 @@ body {
 @media (max-width: 760px) {
   body { background-size: auto, 720px auto; }
   .section { padding-block: 68px; }
-  #research, #collaborations, #news { border-bottom-width: 64px; }
-  #research::after, #collaborations::after, #news::after {
+  main > .section:not(.quote-section):not(.contact) { border-bottom-width: 64px; }
+  main > .section:not(.quote-section):not(.contact)::after {
     left: 14px;
     right: 14px;
     bottom: -64px;
     height: 64px;
+    letter-spacing: 0.08em;
   }
-  #research::after, #news::after { letter-spacing: 0.08em; }
   .quote-section { min-height: 390px; }
   .quote-section::before {
     background-image: url("biodiversity-bee.webp"), url("biodiversity-bee.webp");
