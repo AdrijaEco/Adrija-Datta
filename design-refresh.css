@@ -74,7 +74,8 @@ main > .section:not(.quote-section):not(.contact)::after {
   pointer-events: none;
 }
 
-.timeline h3 a { color: var(--forest); text-underline-offset: 4px; }
+.timeline .ufz-journey-mark { width: 112px; }
+.timeline .ufz-journey-mark img { max-width: 108px; width: 108px; height: auto; }
 
 .quote-section {
   isolation: isolate;
@@ -167,6 +168,8 @@ main > .section:not(.quote-section):not(.contact)::after {
   }
   .quote-attribution { align-items: flex-start; flex-direction: column; }
   .portrait { box-shadow: 10px 10px 0 rgba(22, 59, 50, 0.1); }
+  .timeline .ufz-journey-mark { width: 86px; }
+  .timeline .ufz-journey-mark img { max-width: 82px; width: 82px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
