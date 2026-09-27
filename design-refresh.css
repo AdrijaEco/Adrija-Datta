@@ -1,6 +1,11 @@
 /* Clean sans-serif hierarchy with an original, low-contrast botanical texture. */
 body {
-  background: #fff url("botanical-leaves-gray.webp") center top / 690px auto repeat fixed;
+  background-color: #fff;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.72)), url("botanical-leaves-gray.webp");
+  background-position: center top;
+  background-size: auto, 980px auto;
+  background-repeat: repeat;
+  background-attachment: fixed;
   font-family: "Avenir Next", Avenir, "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
@@ -65,8 +70,8 @@ body {
   position: absolute;
   inset: -25%;
   z-index: -1;
-  background: url("botanical-leaves-gray.webp") center / 760px repeat;
-  opacity: 0.075;
+  background: url("botanical-leaves-gray.webp") center / 1040px repeat;
+  opacity: 0.045;
   transform: rotate(-7deg);
 }
 
@@ -109,7 +114,7 @@ body {
 }
 
 @media (max-width: 760px) {
-  body { background-size: 470px auto; }
+  body { background-size: auto, 720px auto; }
   .section { padding-block: 68px; }
   #research, #collaborations, #news { border-bottom-width: 22px; }
   .quote-section { min-height: 390px; }
