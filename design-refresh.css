@@ -1,7 +1,7 @@
 /* Clean sans-serif hierarchy with an original, low-contrast botanical texture. */
 body {
   background-color: #fff;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.72)), url("botanical-leaves-gray.webp");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.62), rgba(255, 255, 255, 0.62)), url("botanical-leaves-gray.webp");
   background-position: center top;
   background-size: auto, 980px auto;
   background-repeat: repeat;
