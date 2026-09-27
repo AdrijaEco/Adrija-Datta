@@ -1,7 +1,7 @@
 /* Clean sans-serif hierarchy with an original, low-contrast botanical texture. */
 body {
   background-color: #fff;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.62), rgba(255, 255, 255, 0.62)), url("botanical-leaves-gray.webp");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.46), rgba(255, 255, 255, 0.46)), url("botanical-leaves-gray.webp");
   background-position: center top;
   background-size: auto, 980px auto;
   background-repeat: repeat;
@@ -74,7 +74,7 @@ body {
   background-position: 7% 18%, 91% 25%, 79% 86%;
   background-size: 82px, 108px, 66px;
   background-repeat: no-repeat;
-  opacity: 0.13;
+  opacity: 0.3;
   pointer-events: none;
 }
 
@@ -84,7 +84,7 @@ body {
   inset: -25%;
   z-index: -1;
   background: url("botanical-leaves-gray.webp") center / 1040px repeat;
-  opacity: 0.045;
+  opacity: 0.075;
   transform: rotate(-7deg);
 }
 
@@ -135,7 +135,7 @@ body {
     background-image: url("biodiversity-bee.webp"), url("biodiversity-bee.webp");
     background-position: 7% 12%, 94% 83%;
     background-size: 58px, 72px;
-    opacity: 0.1;
+    opacity: 0.26;
   }
   .quote-attribution { align-items: flex-start; flex-direction: column; }
   .portrait { box-shadow: 10px 10px 0 rgba(22, 59, 50, 0.1); }
