@@ -71,6 +71,10 @@ main > .section:not(.quote-section):not(.contact)::after {
   font-size: clamp(0.7rem, 1.2vw, 0.86rem);
   font-weight: 600;
   letter-spacing: 0.18em;
+  background-image: linear-gradient(rgba(22, 59, 50, 0.76), rgba(22, 59, 50, 0.76)), url("botanical-leaves-gray.webp");
+  background-position: center, center 46%;
+  background-size: auto, 430px auto;
+  background-repeat: repeat;
   pointer-events: none;
 }
 
@@ -135,7 +139,11 @@ main > .section:not(.quote-section):not(.contact)::after {
 .quote-fade { animation: quote-fade 0.5s ease both; }
 
 .contact {
-  background: var(--forest) !important;
+  background-color: var(--forest) !important;
+  background-image: linear-gradient(90deg, rgba(22, 59, 50, 1) 0%, rgba(22, 59, 50, 0.98) 58%, rgba(22, 59, 50, 0.72) 100%), url("botanical-leaves-gray.webp") !important;
+  background-position: center, right center !important;
+  background-size: auto, 430px auto !important;
+  background-repeat: no-repeat !important;
   color: #fff;
   border-bottom-color: var(--forest);
 }
