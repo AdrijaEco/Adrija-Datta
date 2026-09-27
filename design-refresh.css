@@ -68,7 +68,7 @@ main > .section:not(.quote-section):not(.contact)::before {
   right: 0;
   bottom: -76px;
   height: 76px;
-  background: url("botanical-trees-transparent.webp") center 46% / 430px auto repeat;
+  background: url("botanical-trees-transparent.webp") center 46% / 980px auto repeat;
   opacity: 0.7;
   pointer-events: none;
 }
@@ -122,8 +122,8 @@ main > .section:not(.quote-section):not(.contact)::after {
   position: absolute;
   inset: -25%;
   z-index: -1;
-  background: url("botanical-trees-transparent.webp") center / 1040px repeat;
-  opacity: 0.7;
+  background: url("botanical-trees-transparent.webp") center / 980px repeat;
+  opacity: 0.2;
   transform: rotate(-7deg);
 }
 
@@ -162,7 +162,7 @@ main > .section:not(.quote-section):not(.contact)::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: url("botanical-trees-transparent.webp") right center / 430px auto no-repeat;
+  background: url("botanical-trees-transparent.webp") right center / 980px auto no-repeat;
   opacity: 0.7;
   pointer-events: none;
 }
@@ -183,7 +183,7 @@ main > .section:not(.quote-section):not(.contact)::after {
   main > .section:not(.quote-section):not(.contact)::before {
     bottom: -64px;
     height: 64px;
-    background-size: 360px auto;
+    background-size: 720px auto;
   }
   main > .section:not(.quote-section):not(.contact)::after {
     left: 14px;
@@ -194,6 +194,7 @@ main > .section:not(.quote-section):not(.contact)::after {
     letter-spacing: 0.06em;
   }
   .quote-section { min-height: 390px; }
+  .quote-section::after { background-size: 720px auto; }
   .quote-section::before {
     background-image: url("biodiversity-bee.webp"), url("biodiversity-bee.webp");
     background-position: 7% 12%, 94% 83%;
@@ -202,6 +203,7 @@ main > .section:not(.quote-section):not(.contact)::after {
   }
   .quote-attribution { align-items: flex-start; flex-direction: column; }
   .portrait { box-shadow: 10px 10px 0 rgba(22, 59, 50, 0.1); }
+  .contact::before { background-size: 720px auto; }
   .timeline .ufz-journey-mark { width: 86px; }
   .timeline .ufz-journey-mark img { max-width: 82px; width: 82px; }
 }
