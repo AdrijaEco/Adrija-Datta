@@ -61,6 +61,18 @@ main > .section:not(.quote-section):not(.contact) {
   border-bottom: 76px solid var(--forest);
 }
 
+main > .section:not(.quote-section):not(.contact)::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -76px;
+  height: 76px;
+  background: url("botanical-trees-transparent.webp") center 46% / 430px auto repeat;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
 main > .section:not(.quote-section):not(.contact)::after {
   content: "ECOLOGICAL NETWORKS   .   BIODIVERSITY   .   GLOBAL CHANGE";
   position: absolute;
@@ -73,13 +85,9 @@ main > .section:not(.quote-section):not(.contact)::after {
   justify-content: center;
   color: rgba(255, 255, 255, 0.78);
   text-align: center;
-  font-size: clamp(0.7rem, 1.2vw, 0.86rem);
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  background-image: url("botanical-trees-transparent.webp");
-  background-position: center 46%;
-  background-size: 430px auto;
-  background-repeat: repeat;
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
+  font-weight: 800;
+  letter-spacing: 0.14em;
   pointer-events: none;
 }
 
@@ -115,7 +123,7 @@ main > .section:not(.quote-section):not(.contact)::after {
   inset: -25%;
   z-index: -1;
   background: url("botanical-trees-transparent.webp") center / 1040px repeat;
-  opacity: 0.16;
+  opacity: 0.7;
   transform: rotate(-7deg);
 }
 
@@ -145,13 +153,20 @@ main > .section:not(.quote-section):not(.contact)::after {
 
 .contact {
   background-color: var(--forest) !important;
-  background-image: linear-gradient(90deg, rgba(22, 59, 50, 1) 0%, rgba(22, 59, 50, 0.98) 58%, rgba(22, 59, 50, 0.72) 100%), url("botanical-trees-transparent.webp") !important;
-  background-position: center, right center !important;
-  background-size: auto, 430px auto !important;
-  background-repeat: no-repeat !important;
+  background-image: none !important;
   color: #fff;
   border-bottom-color: var(--forest);
+  overflow: hidden;
 }
+.contact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("botanical-trees-transparent.webp") right center / 430px auto no-repeat;
+  opacity: 0.7;
+  pointer-events: none;
+}
+.contact .wrap { position: relative; z-index: 1; }
 .contact h2::after { background: #e5c693; }
 .contact p { color: #d8e6db; }
 .contact a { color: #f1d8ae; }
@@ -165,12 +180,18 @@ main > .section:not(.quote-section):not(.contact)::after {
   body { background-size: auto, 720px auto; }
   .section { padding-block: 68px; }
   main > .section:not(.quote-section):not(.contact) { border-bottom-width: 64px; }
+  main > .section:not(.quote-section):not(.contact)::before {
+    bottom: -64px;
+    height: 64px;
+    background-size: 360px auto;
+  }
   main > .section:not(.quote-section):not(.contact)::after {
     left: 14px;
     right: 14px;
     bottom: -64px;
     height: 64px;
-    letter-spacing: 0.08em;
+    font-size: 0.82rem;
+    letter-spacing: 0.06em;
   }
   .quote-section { min-height: 390px; }
   .quote-section::before {
