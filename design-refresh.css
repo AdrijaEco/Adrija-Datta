@@ -49,6 +49,11 @@ body {
 
 .about-grid { align-items: start; }
 .portrait { box-shadow: 18px 18px 0 rgba(22, 59, 50, 0.1); }
+.portrait img {
+  object-position: 58% 50%;
+  transform: scale(1.28);
+  transform-origin: 58% 48%;
+}
 .identity-links a[href*="linkedin.com"] img { width: 23px; height: 23px; border-radius: 5px; }
 
 /* A consistent dark pause separates every content chapter. */
@@ -71,9 +76,9 @@ main > .section:not(.quote-section):not(.contact)::after {
   font-size: clamp(0.7rem, 1.2vw, 0.86rem);
   font-weight: 600;
   letter-spacing: 0.18em;
-  background-image: linear-gradient(rgba(22, 59, 50, 0.76), rgba(22, 59, 50, 0.76)), url("botanical-leaves-gray.webp");
-  background-position: center, center 46%;
-  background-size: auto, 430px auto;
+  background-image: url("botanical-trees-transparent.webp");
+  background-position: center 46%;
+  background-size: 430px auto;
   background-repeat: repeat;
   pointer-events: none;
 }
@@ -109,8 +114,8 @@ main > .section:not(.quote-section):not(.contact)::after {
   position: absolute;
   inset: -25%;
   z-index: -1;
-  background: url("botanical-leaves-gray.webp") center / 1040px repeat;
-  opacity: 0.075;
+  background: url("botanical-trees-transparent.webp") center / 1040px repeat;
+  opacity: 0.16;
   transform: rotate(-7deg);
 }
 
@@ -140,7 +145,7 @@ main > .section:not(.quote-section):not(.contact)::after {
 
 .contact {
   background-color: var(--forest) !important;
-  background-image: linear-gradient(90deg, rgba(22, 59, 50, 1) 0%, rgba(22, 59, 50, 0.98) 58%, rgba(22, 59, 50, 0.72) 100%), url("botanical-leaves-gray.webp") !important;
+  background-image: linear-gradient(90deg, rgba(22, 59, 50, 1) 0%, rgba(22, 59, 50, 0.98) 58%, rgba(22, 59, 50, 0.72) 100%), url("botanical-trees-transparent.webp") !important;
   background-position: center, right center !important;
   background-size: auto, 430px auto !important;
   background-repeat: no-repeat !important;
